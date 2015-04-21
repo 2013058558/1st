@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">	
+		function overlay() {
+			el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";	
+		}
+				 
+
+</script>
  <style type="text/css">
 	* {
 		  margin: 0;
@@ -141,12 +149,87 @@
 		margin-right:auto;
 		margin-left:auto;
 	}
+	#overlay {
+		visibility:hidden;
+		border:1px solid red;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width:100%;
+		height:100%;
+		text-align:center;
+		z-index: 1000;
+		background-color: rgba(0,0,0,0.5);
+	}
+	#overlay div {
+		width:300px;
+		margin: 100px auto;
+		background-color: #fff;
+		border:1px solid #000;
+		padding:15px;
+		text-align:center;
+	}
+	a{
+		text-decoration:none;
+		text-align:right;
+	}
+	#eks{
+		float:right;
+		margin-top:-10px;
+		height:10px;
 	
+	}
+	label
+	{
+		width: 4em;
+		float: left;
+		text-align: right;
+		margin-right: 0.5em;
+		display: block
+	}
+
+	.submit input
+	{
+		margin-left: 4.5em;
+	}
+	p{
+		padding: 5px 10px
+	
+	}	
  </style>
 	<title>New Life Org</title>
 </head>
 
 <body>
+<div id="overlay">
+				 <div>
+					<a href="#" name=("x")  onclick="overlay()"><img id="eks" src="../x.gif"></a>
+					  <form action=""  method="POST" >
+						<p><label for="lname">LastName</label> <input type="text" id="lname" /></p>
+						<p><label for="fname">FirstName</label> <input type="text" id="fname" /></p>
+						<p><label for="Country">Country</label> <input type="text" id="country" /></p>
+						<p><label for="Address">Address</label> <input type="text" id="address" /></p>
+						<p><label for="e-mail">E-mail</label> <input type="text" id="e-mail" /></p>
+						<p><label for="Amt">Donation Amount</label>	<select>
+							  <option value="10">&#36; 10</option>
+							  <option value="30">&#36; 30</option>
+							  <option value="50">&#36; 50</option>
+							  <option value="100">&#36; 100</option>
+							  <option value="200">&#36; 200</option>
+							  <option value="500">&#36; 500</option>
+							  <option value="1000">&#36;1000</option>
+						</select>
+						
+						<p>
+							<input type="radio" id="Bank" name="payment" value="Bank">Bank
+							<input type="radio" id="Card" name="payment" value="CCard">Credit Card
+						</p>
+						
+						<p class="submit"><button type="submit" value="Submit">Submit!</button></p>
+						
+					</form>
+				 </div>
+	</div>
 	<div id="box">
 		<div id="header">
 			<div>
@@ -158,16 +241,16 @@
 					<div id="filler" >
 
 					<img id="banner" src="../banner.jpg">
-					<a href=""><img id="donate" src="../don.gif"></a>
+					<a href="#"onclick="overlay();"><img id="donate" src="../don.gif"></a>
 				</div>
 				
 			</div>
 			<div id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li> <a href="">What We Do</a></li>
-								<li> <a href="">Who We Are</a></li>
-								<li> <a href="">How To Help</a></li>
+								<li><a href="../Homepage/index.html">Home</a></li>
+								<li> <a href="../What/What.html">What We Do</a></li>
+								<li> <a href="Who.html">Who We Are</a></li>
+								<li> <a href="../How/How.html">How To Help</a></li>
 
 							
 							</ul>
